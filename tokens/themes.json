@@ -1,0 +1,55 @@
+{
+  "memoria.dark": {
+    "bg": "#1E1D24",
+    "pane": "#2D2B35",
+    "pane2": "#34323E",
+    "line": "#4F4764",
+    "line2": "#3A3845",
+    "text": "rgba(255,255,255,.90)",
+    "muted": "rgba(255,255,255,.55)",
+    "faint": "rgba(255,255,255,.38)",
+    "accent": "#9B74F2",
+    "amber": "#E2B84E",
+    "kraft": "#D4A84C",
+    "ok": "#6FBF6A",
+    "warn": "#FF6B6B"
+  },
+  "memoria.light": {
+    "bg": "#E2E0E9",
+    "pane": "#EBE9F1",
+    "pane2": "#F2F0F7",
+    "line": "#A8A0BC",
+    "line2": "#C9C4D6",
+    "text": "#2A2832",
+    "muted": "#5A5370",
+    "faint": "#7C7890",
+    "accent": "#7C6B9E",
+    "amber": "#E2B84E",
+    "kraft": "#7B5C0A",
+    "ok": "#1B7015",
+    "warn": "#B01A1A"
+  },
+  "ndex.games": {
+    "chrome-start": "#85799C",
+    "chrome-end": "#513F75",
+    "accent": "#7C6B9E"
+  },
+  "ndex.pokemon": {
+    "chrome-start": "#C62828",
+    "chrome-end": "#B03030",
+    "accent": "#ED2222",
+    "lisere": "#F5F5F0"
+  },
+  "ndex.dark": {
+    "app-bg": "#1E1D24",
+    "surface-1": "#28272E",
+    "surface-2": "#2A2735",
+    "surface-3": "#221F2D",
+    "border-1": "#4F4764",
+    "border-2": "#3A3845",
+    "text-1": "rgba(255,255,255,.90)",
+    "text-2": "rgba(255,255,255,.45)",
+    "accent": "#9B74F2",
+    "accent-deep": "#6948BC"
+  }
+}

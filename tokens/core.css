@@ -1,0 +1,85 @@
+/* Généré depuis tokens/core.json et tokens/themes.json — ne pas éditer. */
+:root {
+  --rm-amber: #E2B84E;
+  --rm-gold: #D4A84C;
+  --rm-violet-muted: #7C6B9E;
+  --rm-alert: #FF6B6B;
+  --rm-ink: #2A2832;
+  --rm-ink-muted: #5A5370;
+  --rm-ink-faint: #7C7890;
+  --rm-rule: #A8A0BC;
+  --rm-bg-dark: #1E1D24;
+  --rm-rule-dark: #4F4764;
+  --rm-rule-2-dark: #3A3845;
+  --rm-accent-dark: #9B74F2;
+  --rm-ink-dark: rgba(255,255,255,.90);
+  --rm-surface-canvas: #E3E0EA;
+  --rm-surface-s1: #D9D4E0;
+  --rm-surface-s2: #36353A;
+  --rm-surface-s3: #27262A;
+  --rm-diode-gold: #F4C95D;
+  --rm-diode-red: #FF6B6B;
+  --rm-diode-blue: #6FA8FF;
+  --rm-diode-off: #D9D4E4;
+  --rm-radius-left: 16px 8px 32px 16px;
+  --rm-radius-center: 8px;
+  --rm-radius-right: 16px 16px 8px 32px;
+  --rm-border: 1px solid #000;
+  --rm-font-body: "Space Grotesk", system-ui, sans-serif;
+  --rm-font-label: ui-monospace, "SF Mono", Menlo, monospace;
+  --rm-accent: var(--rm-violet-muted);
+}
+
+[data-rm="memoria-dark"] {
+  --rm-bg: #1E1D24;
+  --rm-pane: #2D2B35;
+  --rm-pane2: #34323E;
+  --rm-line: #4F4764;
+  --rm-line2: #3A3845;
+  --rm-text: rgba(255,255,255,.90);
+  --rm-muted: rgba(255,255,255,.55);
+  --rm-faint: rgba(255,255,255,.38);
+  --rm-accent: #9B74F2;
+  --rm-amber: #E2B84E;
+  --rm-kraft: #D4A84C;
+  --rm-ok: #6FBF6A;
+  --rm-warn: #FF6B6B;
+}
+[data-rm="memoria-light"] {
+  --rm-bg: #E2E0E9;
+  --rm-pane: #EBE9F1;
+  --rm-pane2: #F2F0F7;
+  --rm-line: #A8A0BC;
+  --rm-line2: #C9C4D6;
+  --rm-text: #2A2832;
+  --rm-muted: #5A5370;
+  --rm-faint: #7C7890;
+  --rm-accent: #7C6B9E;
+  --rm-amber: #E2B84E;
+  --rm-kraft: #7B5C0A;
+  --rm-ok: #1B7015;
+  --rm-warn: #B01A1A;
+}
+[data-rm="ndex-games"] {
+  --rm-chrome-start: #85799C;
+  --rm-chrome-end: #513F75;
+  --rm-accent: #7C6B9E;
+}
+[data-rm="ndex-pokemon"] {
+  --rm-chrome-start: #C62828;
+  --rm-chrome-end: #B03030;
+  --rm-accent: #ED2222;
+  --rm-lisere: #F5F5F0;
+}
+[data-rm="ndex-dark"] {
+  --rm-app-bg: #1E1D24;
+  --rm-surface-1: #28272E;
+  --rm-surface-2: #2A2735;
+  --rm-surface-3: #221F2D;
+  --rm-border-1: #4F4764;
+  --rm-border-2: #3A3845;
+  --rm-text-1: rgba(255,255,255,.90);
+  --rm-text-2: rgba(255,255,255,.45);
+  --rm-accent: #9B74F2;
+  --rm-accent-deep: #6948BC;
+}

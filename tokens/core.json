@@ -1,0 +1,163 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Retromorphism — tokens extracted from two shipped products, not proposed.",
+  "$extracted": "2026-07-29",
+  "$sources": {
+    "ndex": "src/lib/design-tokens.ts + styles/globals.dark.css",
+    "memoria": "computed styles read from the running hub, both themes"
+  },
+  "shared-core": {
+    "$description": "Thirteen values appear in both codebases at the same hex, reached separately. Eight in the light themes, five more in the dark ones — the dark overlap is the stronger signal, since dark palettes are where most systems diverge.",
+    "amber": {
+      "$value": "#E2B84E",
+      "$in": [
+        "ndex.retro-accent",
+        "memoria.--amber"
+      ]
+    },
+    "gold": {
+      "$value": "#D4A84C",
+      "$in": [
+        "ndex.accent-gold",
+        "memoria.--kraft"
+      ]
+    },
+    "violet-muted": {
+      "$value": "#7C6B9E",
+      "$in": [
+        "ndex.accent-muted",
+        "memoria.--accent(light)"
+      ]
+    },
+    "alert": {
+      "$value": "#FF6B6B",
+      "$in": [
+        "ndex.diode-red",
+        "memoria.--warn(dark)"
+      ]
+    },
+    "ink": {
+      "$value": "#2A2832",
+      "$in": [
+        "ndex.text-1",
+        "memoria.--text(light)"
+      ]
+    },
+    "ink-muted": {
+      "$value": "#5A5370",
+      "$in": [
+        "ndex.text-3",
+        "memoria.--muted(light)"
+      ]
+    },
+    "ink-faint": {
+      "$value": "#7C7890",
+      "$in": [
+        "ndex.text-2",
+        "memoria.--faint(light)"
+      ]
+    },
+    "rule": {
+      "$value": "#A8A0BC",
+      "$in": [
+        "ndex.border-2",
+        "memoria.--line(light)"
+      ]
+    },
+    "bg-dark": {
+      "$value": "#1E1D24",
+      "$in": [
+        "ndex.app-bg(dark)",
+        "memoria.--bg(dark)"
+      ]
+    },
+    "rule-dark": {
+      "$value": "#4F4764",
+      "$in": [
+        "ndex.border-1(dark)",
+        "memoria.--line(dark)"
+      ]
+    },
+    "rule-2-dark": {
+      "$value": "#3A3845",
+      "$in": [
+        "ndex.border-2(dark)",
+        "memoria.--line2(dark)"
+      ]
+    },
+    "accent-dark": {
+      "$value": "#9B74F2",
+      "$in": [
+        "ndex.retro-accent(dark)",
+        "memoria.--accent(dark)"
+      ]
+    },
+    "ink-dark": {
+      "$value": "rgba(255,255,255,.90)",
+      "$in": [
+        "ndex.text-1(dark)",
+        "memoria.--text(dark)"
+      ]
+    }
+  },
+  "surface": {
+    "$description": "Four levels of depth. Dark shells sit INSIDE light canvas — the inversion is the point: the device is light, its screens are dark.",
+    "canvas": {
+      "$value": "#E3E0EA"
+    },
+    "s1": {
+      "$value": "#D9D4E0"
+    },
+    "s2": {
+      "$value": "#36353A"
+    },
+    "s3": {
+      "$value": "#27262A"
+    }
+  },
+  "diode": {
+    "$description": "Status lights, read at a glance before any label. Sized 12px, gap 8px.",
+    "gold": {
+      "$value": "#F4C95D"
+    },
+    "red": {
+      "$value": "#FF6B6B"
+    },
+    "blue": {
+      "$value": "#6FA8FF"
+    },
+    "off": {
+      "$value": "#D9D4E4"
+    }
+  },
+  "radius": {
+    "$description": "Asymmetric by position. A module on the left is not a module on the right — the shell is moulded, not tiled.",
+    "left": {
+      "$value": "16px 8px 32px 16px"
+    },
+    "center": {
+      "$value": "8px"
+    },
+    "right": {
+      "$value": "16px 16px 8px 32px"
+    }
+  },
+  "border": {
+    "standard": {
+      "$value": "1px solid #000000",
+      "$description": "Structural contrast comes from frames, not from shadows."
+    }
+  },
+  "type": {
+    "$description": "Two registers, never three: a grotesque to read, a monospace in small caps with wide tracking to label. The monospace label is the signature of the style.",
+    "body": {
+      "$value": "Space Grotesk, system-ui, sans-serif"
+    },
+    "label": {
+      "$value": "ui-monospace, SF Mono, Menlo, monospace",
+      "$tracking": "0.12em–0.22em",
+      "$transform": "uppercase",
+      "$weight": 600
+    }
+  }
+}
