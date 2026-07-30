@@ -256,3 +256,29 @@ float in the padding above it.
 
 Where a value has been calibrated by eye across a family, the calibration is the
 asset — an unmotivated tidy-up destroys it silently.
+
+### 17. A box too short to carry the family radius must leave the curve, not equalise it
+
+Rule 13 says two curves meeting flush share a radius. It does not say what to do
+when one of them *cannot hold* the shared value.
+
+A 4px-tall strip lying on the bottom lip of a 22px-radius shell, given
+`border-radius: 0 0 22px 22px`, does not get 22px corners. When a radius exceeds
+the box that carries it, the browser scales **all four** radii by the same factor
+until they fit — here to roughly 4px. The strip keeps near-square corners while
+the shell curves away beneath it, and overhangs the curve at both ends. Raising
+the strip's radius cannot fix this; the clamp recomputes from the same height.
+
+```css
+/* the strip lives in the FLAT run, stopping at the radius value */
+left: 24px; right: 24px;          /* 24px = the shell's bottom radius */
+border-radius: 2px;               /* its own ends, not the shell's */
+```
+
+The general form: a family value is only inheritable by members large enough to
+express it. Where a member cannot, withdraw it from the shared geometry rather
+than assigning a value the renderer will silently rewrite. A moulded vent groove
+does the same thing physically — it never runs into the corner of the mould.
+
+Corollary for review: **a radius that exceeds its own box is not a value, it is a
+request.** Read back what was computed, never what was written.
