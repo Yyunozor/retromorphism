@@ -39,7 +39,7 @@
   --rm-accent: var(--rm-violet-muted);
 }
 
-[data-rm="memoria-dark"] {
+[data-rm="console-dark"] {
   --rm-bg: #1E1D24;
   --rm-pane: #2D2B35;
   --rm-pane2: #34323E;
@@ -54,7 +54,7 @@
   --rm-ok: #6FBF6A;
   --rm-warn: #FF6B6B;
 }
-[data-rm="memoria-light"] {
+[data-rm="console-light"] {
   --rm-bg: #E2E0E9;
   --rm-pane: #EBE9F1;
   --rm-pane2: #F2F0F7;

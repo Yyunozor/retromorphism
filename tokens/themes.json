@@ -1,5 +1,7 @@
 {
-  "memoria.dark": {
+  "_lisez_moi": "Les cles console.* portent les valeurs de la peau CONSOLE, soit :root:not([data-skin=\"memoria\"]) dans memoria_theme.py — le defaut. Elles s appelaient memoria.* jusqu au 2026-08-01, ce qui nommait exactement l inverse de la condition CSS qui les selectionne.",
+
+  "console.dark": {
     "bg": "#1E1D24",
     "pane": "#2D2B35",
     "pane2": "#34323E",
@@ -14,7 +16,7 @@
     "ok": "#6FBF6A",
     "warn": "#FF6B6B"
   },
-  "memoria.light": {
+  "console.light": {
     "bg": "#E2E0E9",
     "pane": "#EBE9F1",
     "pane2": "#F2F0F7",
