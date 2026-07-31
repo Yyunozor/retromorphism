@@ -38,6 +38,22 @@ So this repository is deliberately in two layers:
 Every claim below says which layer it belongs to. A value with no dialect marker
 is one that both codebases resolve identically.
 
+### The origin, live
+
+Captured from nd-x.app on 2026-08-01, phone width, from a browser asking for a
+**dark** colour scheme. The site serves `#E3E0EA` anyway — the light canvas of
+the inversion, chosen rather than inherited.
+
+| Search hub | A title | Consoles |
+|---|---|---|
+| ![](assets/ndex-live-recherche.webp) | ![](assets/ndex-live-fiche-jeu.webp) | ![](assets/ndex-live-consoles.webp) |
+
+Everything the language claims is visible here: the moulded shell with its gold
+seam, monospace labels in small caps, cards set into a light canvas, status
+carried by shape and colour before text.
+
+### The adopter
+
 ![Memoria — panels, grooves, phosphor screen](assets/memoria-constellation.png)
 
 ---
@@ -91,6 +107,7 @@ either side — each is right for its appliance.
 | Hexagon | forbidden | carries the count, `clip-path` on 6 points |
 | Corner radii | `6px 6px 14px 14px` on the tab bar | families of `16/16/22/22`, `18/18/12/12` |
 | Accent | `#C6403C` light / `#D0524E` dark | `--accent`, permuted per theme |
+| Default theme | **light** — served over a system `dark` preference | dark |
 
 The reason to publish this table rather than smooth it over: the repository's own
 test — strip the colour, keep frames, grooves and radii, and ask whether it still
@@ -103,12 +120,16 @@ neither product.
 **Matter over shadow.** Depth is built from surface levels and frames, not from
 drop shadows. Four levels.
 
-The inversion — dark shells *inside* a light canvas — is the **light theme
-only**, and it is worth naming because the light theme is not what either
-product runs. In the dark theme both stack dark-on-dark and the inversion does
-not exist: Memoria goes `--bg #1E1D24` → `--pane #252430`, NDEX goes surface-0
-`#1E1D24` → s1 `#28272E` → s2 `#2A2735`. A principle that only holds in the
-theme nobody uses is a principle about a drawing, not about a device.
+The inversion — dark shells *inside* a light canvas — is **NDEX's**, and it is
+live. Loaded on 2026-08-01 from a browser asking for `prefers-color-scheme:
+dark`, nd-x.app still paints `#E3E0EA`: the canvas value below, served in spite
+of the system preference. The origin product runs light on purpose, and the
+inversion is what you see.
+
+Memoria, the adopter, does not follow it there. It stacks dark on dark —
+`--bg #1E1D24` → `--pane #252430` — and the inversion simply does not occur.
+This is the clearest case of a dialect: the same principle, honoured by one
+appliance and set aside by the other, for a reason each can state.
 
 ```
 canvas #E3E0EA  ← the page
