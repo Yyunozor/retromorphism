@@ -8,9 +8,35 @@ premise is narrower and older. A screen is a **panel set into a moulded shell**:
 it has frames, notches, status lights and a bezel, and depth comes from
 structure rather than from blur.
 
-The values here are read out of two codebases that use them, rather than
-picked for a palette. Where the two disagree, that is written down rather than
-averaged away.
+The values here are read out of two codebases that use them, rather than picked
+for a palette. Where the two disagree, that is written down rather than averaged
+away.
+
+## One language, two dialects
+
+Retromorphism was born on **NDEX** — a Swiss price index for retro games and
+Pokémon cards. It was designed there, for a product that shows numbers about
+objects people collect. **Memoria adopted it afterwards**, for something else
+entirely: an instrument that shows the shape of a knowledge base.
+
+That order matters, and it is the whole interest of the thing. A design language
+that only ever dressed the product it was made for has proved nothing. This one
+was ported to an appliance of a different nature, and it survived — but it did
+not survive unchanged, and pretending otherwise would be the easy lie.
+
+So this repository is deliberately in two layers:
+
+- **The core** — what holds in both, verified in both codebases at the same
+  value: the palette, the four principles, and the seventeen rules. These are
+  mechanics, not a look. They transfer.
+- **The two dialects** — where the appliances legitimately differ. NDEX draws a
+  `1px` frame, Memoria a `2px` one. NDEX's diodes breathe by design; Memoria's
+  chrome stopped moving on purpose. NDEX forbids the hexagon; in Memoria the
+  hexagon is what carries the count. None of these is a drift to be corrected:
+  they are two devices, and a language that produces one device is a template.
+
+Every claim below says which layer it belongs to. A value with no dialect marker
+is one that both codebases resolve identically.
 
 ![Memoria — panels, grooves, phosphor screen](assets/memoria-constellation.png)
 
@@ -19,17 +45,22 @@ averaged away.
 ## The measured core
 
 Thirteen values appear in both codebases at the same hex, reached separately
-over several months. Eight in the light themes — and five more in the dark ones,
-which is the stronger signal: dark palettes are where most systems drift apart.
+over several months. **Six in the light themes, seven in the dark** — and the
+dark ones are the stronger signal, because dark palettes are where most systems
+drift apart.
+
+An earlier revision of this table put `--rm-gold` and `--rm-alert` under
+*Light* and counted eight against five. Both are dark-theme values: in the light
+theme Memoria resolves them to `#7B5C0A` and `#B01A1A`
+(`contenu/scripts/memoria_theme.py:50-51` against `:63-64`). The count followed
+the mistake.
 
 **Light**
 
 | Token | Value | NDEX | Memoria |
 |---|---|---|---|
 | `--rm-amber` | `#E2B84E` | `retro-accent` | `--amber` |
-| `--rm-gold` | `#D4A84C` | `accent-gold` | `--kraft` |
 | `--rm-violet-muted` | `#7C6B9E` | `accent-muted` | `--accent` |
-| `--rm-alert` | `#FF6B6B` | `diode-red` | `--warn` |
 | `--rm-ink` | `#2A2832` | `text-1` | `--text` |
 | `--rm-ink-muted` | `#5A5370` | `text-3` | `--muted` |
 | `--rm-ink-faint` | `#7C7890` | `text-2` | `--faint` |
@@ -44,12 +75,40 @@ which is the stronger signal: dark palettes are where most systems drift apart.
 | `--rm-rule-2-dark` | `#3A3845` | `border-2` | `--line2` |
 | `--rm-accent-dark` | `#9B74F2` | `retro-accent` | `--accent` |
 | `--rm-ink-dark` | `rgba(255,255,255,.90)` | `text-1` | `--text` |
+| `--rm-gold` | `#D4A84C` | `accent-gold` | `--kraft` |
+| `--rm-alert` | `#FF6B6B` | `diode-red` | `--warn` |
+
+## Where the two dialects part
+
+Measured on 2026-08-01, both codebases open side by side. These are not bugs on
+either side — each is right for its appliance.
+
+| Trait | NDEX (origin) | Memoria (adopter) |
+|---|---|---|
+| Frame | `1px solid #000` | `2px solid var(--outline)` — no `1px` frame anywhere |
+| Diode | 16px, 8px gap | 6, 8 or 9px; no 12px diode exists |
+| Movement | diodes breathe: 2000 ms loop, 1000 ms on alert | chrome stopped moving on 2026-07-31, on purpose |
+| Hexagon | forbidden | carries the count, `clip-path` on 6 points |
+| Corner radii | `6px 6px 14px 14px` on the tab bar | families of `16/16/22/22`, `18/18/12/12` |
+| Accent | `#C6403C` light / `#D0524E` dark | `--accent`, permuted per theme |
+
+The reason to publish this table rather than smooth it over: the repository's own
+test — strip the colour, keep frames, grooves and radii, and ask whether it still
+reads as one appliance — returns **two**. A language honest about that is usable.
+One that hides it produces the third thing nobody wants: a template that fits
+neither product.
 
 ## The four principles
 
-**Matter over shadow.** Depth is built from surface levels and 1px frames, not
-from drop shadows. Four levels, and the inversion matters: dark shells sit
-*inside* a light canvas, because the device is light and its screens are dark.
+**Matter over shadow.** Depth is built from surface levels and frames, not from
+drop shadows. Four levels.
+
+The inversion — dark shells *inside* a light canvas — is the **light theme
+only**, and it is worth naming because the light theme is not what either
+product runs. In the dark theme both stack dark-on-dark and the inversion does
+not exist: Memoria goes `--bg #1E1D24` → `--pane #252430`, NDEX goes surface-0
+`#1E1D24` → s1 `#28272E` → s2 `#2A2735`. A principle that only holds in the
+theme nobody uses is a principle about a drawing, not about a device.
 
 ```
 canvas #E3E0EA  ← the page
@@ -66,7 +125,7 @@ says *instrument* rather than *website*.
 right. `16px 8px 32px 16px` on the left, `8px` in the centre, mirrored on the
 right — the shell is moulded, not tiled.
 
-**Status before text.** Diodes (12px, 8px apart) carry state at a glance:
+**Status before text.** Diodes carry state at a glance:
 gold / red / blue / off. The label explains; the diode is read first.
 
 ## Two worlds, one frame
@@ -78,7 +137,7 @@ modes read as the same device:
 | | Games | Pokémon |
 |---|---|---|
 | chrome | `#85799C → #513F75` | `#C62828 → #B03030` |
-| accent | `#7C6B9E` | `#ED2222` |
+| accent | `#7C6B9E` | `#C6403C` light / `#D0524E` dark |
 
 | Games | Pokémon | Detail |
 |---|---|---|
@@ -107,7 +166,7 @@ shell recedes, the screens carry the signal, the diodes do the talking.
 
 ## Rules that cost something to learn
 
-Sixteen of them, each with what was tried first and why it failed. →
+Seventeen of them, each with what was tried first and why it failed. →
 [docs/rules.md](docs/rules.md)
 
 **Cap the highlight.** A selected state never exceeds **1.4×** the resting
@@ -134,9 +193,9 @@ text. Everywhere else, saturation is a mistake.
 ```
 tokens/core.json     the measured core, W3C design-tokens shape
 tokens/themes.json   per-product, per-theme values
-tokens/core.css      custom properties, generated — never hand-edited
+tokens/core.css      custom properties, written by hand alongside core.json
 docs/anatomy.md      the six pieces, each with its recipe
-docs/rules.md        sixteen rules, each with the failure that produced it
+docs/rules.md        seventeen rules, each with the failure that produced it
 docs/principles.md   what this is and is not
 assets/              parts cropped from the running interfaces
 ```
@@ -166,3 +225,13 @@ That is the limit of what this can be, and it is stated here rather than
 implied.
 
 — Yyunozor, 2026-07-29
+
+---
+
+## Reproducing this by machine
+
+[`docs/agentic.md`](docs/agentic.md) — what happened when an agent was asked to
+build in this style from the sources alone. Short version: reading a source
+codebase yields the palette and loses the grammar; the token file is what
+carries the parts that are not colours. Includes a proposed addition to the
+anatomy, the **specification plate**.

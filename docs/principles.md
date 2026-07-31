@@ -27,7 +27,7 @@ different language entirely.
 explains what the diode already said.
 
 **Density without noise.** Small type, wide tracking, tight rhythm. What makes
-it legible is the discipline about movement: nothing pulses, nothing flashes,
+it legible is the discipline about movement in Memoria: nothing pulses, nothing flashes,
 highlights are capped at 1.4× resting luminance.
 
 ## The test

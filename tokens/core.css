@@ -1,4 +1,13 @@
-/* Généré depuis tokens/core.json et tokens/themes.json — ne pas éditer. */
+/* Aplatissement CURATÉ de tokens/core.json et tokens/themes.json — pas généré.
+   Les noms CSS regroupent et renomment ce que les JSON séparent par
+   provenance : `surface.s1` y désigne une valeur claire, `--rm-surface-1` une
+   valeur sombre. Un générateur name-for-name renommerait donc le contrat
+   publié ; l'aplatissement reste à la main, et c'est un choix.
+   Ce qui EST mécanique et vérifié : toute couleur de ce fichier trace vers une
+   valeur de core.json ou themes.json, et toute valeur existe dans le code réel
+   dont elle est extraite.
+   Corrigé le 2026-07-31 : l'en-tête annonçait « généré — ne pas éditer » alors
+   qu'aucun script du dépôt ne mentionnait core.json. */
 :root {
   --rm-amber: #E2B84E;
   --rm-gold: #D4A84C;
@@ -68,7 +77,7 @@
 [data-rm="ndex-pokemon"] {
   --rm-chrome-start: #C62828;
   --rm-chrome-end: #B03030;
-  --rm-accent: #ED2222;
+  --rm-accent: #C6403C;   /* dark dialect: #D0524E */
   --rm-lisere: #F5F5F0;
 }
 [data-rm="ndex-dark"] {

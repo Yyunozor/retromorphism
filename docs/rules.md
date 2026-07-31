@@ -1,6 +1,6 @@
 # Rules
 
-Sixteen rules, each stated with the mechanism that makes it true. The incidents
+Seventeen rules, each stated with the mechanism that makes it true. The incidents
 that produced them are omitted; only what generalises is kept.
 
 Ordered from the most structuring to the finest. Selectors are neutral names:
