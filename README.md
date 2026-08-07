@@ -36,9 +36,29 @@ system preference — the site serves its light canvas anyway, by choice.
 |---|---|---|
 | ![](assets/ndex-live-recherche.webp) | ![](assets/ndex-live-fiche-jeu.webp) | ![](assets/ndex-live-consoles.webp) |
 
+### The shopfront
+
+The landing at [nd-x.app](https://nd-x.app) speaks the language at marketing
+scale — captured 2026-08-07. The cartridge logo is set into a moulded bezel
+with its three diodes; the circuit engraving in the margins is drawn by hand,
+not generated; and both shells sit in the same frame, one hue apart.
+
+![The landing: cartridge logo, hand-drawn engraving, both worlds' shells](assets/ndex-vitrine-hero.webp)
+
+| Two worlds, one entry — the hue swap alone | The proof panel — an instrument publishing its coverage |
+|---|---|
+| ![](assets/ndex-vitrine-deux-mondes.webp) | ![](assets/ndex-vitrine-preuve.webp) |
+
+The page closes on a seal — *built with assayer*, the adopter's engine,
+public at [Yyunozor/assayer-memory-mcp](https://github.com/Yyunozor/assayer-memory-mcp).
+
 ### The adopter
 
 ![Memoria — panels, grooves, phosphor screen](assets/memoria-constellation.png)
+
+Its engine ships in public as
+[assayer](https://github.com/Yyunozor/assayer-memory-mcp) — the knowledge
+base whose hub these panels belong to.
 
 ## The measured core
 
